@@ -1,18 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Event.css';
+import volunteer from '../../logos/users-alt 1.png';
+import addEvent from '../../logos/plus 1.png';
 
 const Event = () => {
     return (
         <section className='px-5'>
             <div className="event-section">
-                <article className=''>
-                    <Link to={'/'}>Volunteer register list</Link>
-                    <p>Add event</p>
+                <article className='event-text'>
+                    <p>
+                        <img src={volunteer} alt="img" />
+                        Volunteer register list</p>
+                    <p className='add-event'>
+                        <img src={addEvent} alt="img" />
+                        Add event</p>
                 </article>
                 <article>
-                    <h1>Add event</h1>
-                    <article className='d-flex justify-content-around'>
+                    <article className='d-flex justify-content-around mt-5'>
                         <div>
                             <label className='d-block mb-2'>Event title</label>
                             <input className='input-field mb-3' type="text" placeholder='Event title...' />
@@ -29,7 +33,7 @@ const Event = () => {
                         </div>
                     </article>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-primary me-2" type="button">Button</button>
+                        <button class="btn btn-primary me-2" type="button">Submit</button>
                     </div>
                 </article>
             </div>

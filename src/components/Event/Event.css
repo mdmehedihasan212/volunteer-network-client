@@ -12,3 +12,16 @@
     width: 450px;
     height: 120px;
 }
+
+.event-text {
+    margin-top: 45px;
+}
+
+.event-text img {
+    width: 18px;
+    margin-right: 10px;
+}
+
+.add-event {
+    color: cornflowerblue;
+}
