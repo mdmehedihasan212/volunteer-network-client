@@ -2,8 +2,8 @@
     border: 1px solid lightgray;
     width: 570px;
     height: 460px;
-    margin: 0 auto;
-    margin-top: 60px;
+    margin: 60px auto;
+    border-radius: 4px;
 }
 
 .main-form {
@@ -16,6 +16,7 @@
     height: 50px;
     border: 1px solid #C7C7C7;
     border-radius: 57px;
+    background-color: white;
 }
 
 .icon {
