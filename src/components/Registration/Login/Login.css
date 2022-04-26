@@ -1,0 +1,24 @@
+.form-container {
+    border: 1px solid lightgray;
+    width: 570px;
+    height: 460px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.main-form {
+    margin: 150px 55px;
+}
+
+.register-btn {
+    font-size: 16px;
+    width: 455px;
+    height: 50px;
+    border: 1px solid #C7C7C7;
+    border-radius: 57px;
+}
+
+.icon {
+    font-size: 2.2em;
+    margin-right: 20px;
+}
