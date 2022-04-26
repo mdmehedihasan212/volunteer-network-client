@@ -1,0 +1,14 @@
+.event-section {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.input-field {
+    width: 450px;
+    height: 40px;
+}
+
+.text-field {
+    width: 450px;
+    height: 120px;
+}

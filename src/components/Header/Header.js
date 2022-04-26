@@ -5,16 +5,20 @@ import CustomLink from '../CustomLink/CustomLink';
 
 const Header = () => {
     return (
-        <section className='header'>
+        <header className='header'>
             <div className='header-logo'>
                 <img src={logo} alt="" />
             </div>
             <nav className='navigation'>
                 <CustomLink to={'/'}>Home</CustomLink>
+                <CustomLink to={'/donation'}>Donation</CustomLink>
+                <CustomLink to={'/event'}>Event</CustomLink>
+                <CustomLink to={'/blog'}>Blog</CustomLink>
                 <CustomLink to={'/about'}>About</CustomLink>
-                <CustomLink to={'/login'}>Login</CustomLink>
+                <CustomLink className='btn btn-primary text-white rounded-2 px-4' to={'/login'}>Register</CustomLink>
+                <CustomLink className='btn btn-dark text-white rounded-2 px-4' to={'/admin'}>Admin</CustomLink>
             </nav>
-        </section>
+        </header>
     );
 };
 
