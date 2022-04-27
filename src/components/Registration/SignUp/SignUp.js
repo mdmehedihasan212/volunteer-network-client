@@ -2,6 +2,7 @@ import React from 'react';
 import './SignUp.css';
 
 const SignUp = () => {
+
     return (
         <section className='register-form '>
             <form className='register-text w-75 mx-auto'>

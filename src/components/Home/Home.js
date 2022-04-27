@@ -6,6 +6,7 @@ import './Home.css';
 
 const Home = () => {
     const [volunteers, setVolunteers] = useVolunteer();
+
     return (
         <section>
             <h1 className='text-center mt-5 text-uppercase'>I grow by helping people in need</h1>

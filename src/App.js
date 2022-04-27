@@ -11,6 +11,8 @@ import Donation from './components/Donation/Donation';
 import Event from './components/Event/Event';
 import Admin from './components/Admin/Admin';
 import Blog from './components/Blog/Blog';
+import { ToastContainer } from 'react-toastify';
+import RequireAuth from './auth/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -20,12 +22,17 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/donation" element={<Donation />}></Route>
-        <Route path="/event" element={<Event />}></Route>
+        <Route path="/event" element={
+          <RequireAuth>
+            <Event />
+          </RequireAuth>
+        }></Route>
         <Route path="/blog" element={<Blog />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
