@@ -2,7 +2,7 @@ import React from 'react';
 import './Event.css';
 import volunteer from '../../logos/users-alt 1.png';
 import addEvent from '../../logos/plus 1.png';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import useEvent from '../../hooks/useEvent';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -10,20 +10,26 @@ import { toast } from 'react-toastify';
 const Event = () => {
     const { id } = useParams();
     const [event] = useEvent(id);
+    const navigate = useNavigate();
 
     const handleSubmit = e => {
         e.preventDefault();
+
         const addEvent = {
             name: event?.name,
             description: e.target.description?.value,
             img: event?.value,
             date: e.target.date?.value,
         }
-        console.log(addEvent.name);
 
         axios.post('http://localhost:5000/event', addEvent)
             .then(response => {
-                console.log(response);
+                const { data } = response;
+                if (data.insertedId) {
+                    toast('Your Event Is Booked!')
+                    e.target.reset();
+                    navigate('/donation')
+                }
             })
 
     }
@@ -55,7 +61,9 @@ const Event = () => {
                         <input value={event?.picture} type="url" name="img" id="" />
                     </div>
                 </article>
-                <button className="btn btn-primary me-2" type="submit">Submit</button>
+                <article class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </article>
             </form>
         </section>
     );

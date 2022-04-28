@@ -16,10 +16,9 @@ const Header = () => {
             </div>
             <nav className='navigation'>
                 <CustomLink to={'/'}>Home</CustomLink>
-                <CustomLink to={'/donation'}>Donation</CustomLink>
                 <CustomLink to={'/event'}>Event</CustomLink>
+                <CustomLink to={'/donation'}>Donation</CustomLink>
                 <CustomLink to={'/blog'}>Blog</CustomLink>
-                <CustomLink to={'/about'}>About</CustomLink>
                 {
                     user ?
                         <CustomLink onClick={() => signOut(auth)} className='btn btn-primary text-white rounded-2 px-4' to={'/login'}>Sign Out</CustomLink>
