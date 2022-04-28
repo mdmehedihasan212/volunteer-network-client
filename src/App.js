@@ -27,6 +27,11 @@ function App() {
             <Event />
           </RequireAuth>
         }></Route>
+        <Route path="/event/:id" element={
+          <RequireAuth>
+            <Event />
+          </RequireAuth>
+        }></Route>
         <Route path="/blog" element={<Blog />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
